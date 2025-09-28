@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Men In Ties — закрытый Telegram‑канал с крипто‑сигналами</title>
+  <meta name="description" content="Сигналы с точками входа/стопами, прозрачная статистика, дисциплина и поддержка комьюнити. Два тарифа: 3 мес — $590, 6 мес — $990." />
+  <meta name="color-scheme" content="light dark" />
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+  <link rel="apple-touch-icon" href="favicon-180.png">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Men In Ties — закрытый крипто‑канал">
+  <meta property="og:description" content="Точные входы/выходы, дисциплина и прозрачная статистика.">
+  <meta property="og:image" content="og-image.png">
+  <meta property="og:type" content="website">
+  <style>
+    :root{
+      --bg:#090c12; --panel:#101624; --card:#151c2b; --muted:#9aa3b2; --text:#e9edf3;
+      --brand:#6ae2a0; --brand2:#79c4ff; --accent:#ffd782; --danger:#ff6b6b; --ok:#7ef0b3;
+      --ring:0 0 0 2px rgba(106,226,160,.35);
+      --radius:16px; --shadow:0 18px 60px rgba(0,0,0,.35); --shadow-soft:0 10px 28px rgba(0,0,0,.25);
+      --max:1200px;
+    }
+    html,body{margin:0;padding:0;background:radial-gradient(100% 120% at 0% 0%, rgba(106,226,160,.08), transparent 40%), radial-gradient(100% 120% at 100% 0%, rgba(121,196,255,.07), transparent 35%), #0b0f17; color:var(--text); font:16px/1.55 Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif}
+    *{box-sizing:border-box}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+    /* NAV */
+    .nav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(160%) blur(14px);background:rgba(11,14,20,.55);border-bottom:1px solid #20263a}
+    .nav .inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+    .logo{display:flex;gap:12px;align-items:center}
+    .logo img{width:36px;height:36px;border-radius:10px;display:block;box-shadow:0 0 0 1px #1f2536}
+    .brand{font-weight:800;letter-spacing:.2px}
+    .nav .links{display:flex;gap:10px;align-items:center}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid #2a3248;border-radius:999px;color:#cbd3e4;font-size:13px;white-space:nowrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 18px;border-radius:14px;border:1px solid #2a3248;background:var(--card);color:var(--text);font-weight:800;box-shadow:var(--shadow-soft);transition:transform .2s, filter .2s}
+    .btn:hover{transform:translateY(-1px)}
+    .btn.primary{background:linear-gradient(135deg,var(--brand) 0%, var(--brand2) 100%);color:#052015;border-color:transparent;box-shadow:0 14px 36px rgba(106,226,160,.25)}
+    .btn.ghost{background:transparent}
+    .btn.disabled{pointer-events:none;opacity:.5;filter:grayscale(40%)}
+    /* HERO */
+    .hero{padding:80px 0 48px}
+    .hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center}
+    .kicker{display:inline-flex;gap:10px;align-items:center;color:var(--muted);font-weight:700;letter-spacing:.28px;text-transform:uppercase}
+    .kicker .dot{width:8px;height:8px;border-radius:50%;background:var(--brand)}
+    h1{font-size:48px;line-height:1.08;margin:12px 0 10px}
+    .lead{font-size:18px;color:#cfd6e6;max-width:640px}
+    .proofbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .proof{background:linear-gradient(135deg,rgba(106,226,160,.08),rgba(121,196,255,.08));border:1px solid #23304a;border-radius:12px;padding:8px 12px;font-size:13px;color:#cfe3d8}
+    .cta{display:flex;gap:14px;margin-top:22px;flex-wrap:wrap}
+    .hero-card{background:radial-gradient(90% 80% at 20% 0%,rgba(106,226,160,.08),transparent 60%),var(--panel);border:1px solid #23283a;border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+    .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:12px}
+    .metric{background:var(--card);border:1px solid #23283a;border-radius:12px;padding:14px}
+    .metric .v{font-size:26px;font-weight:900}
+    /* STRIP */
+    .strip{padding:16px 0;border-top:1px solid #1b2030;border-bottom:1px solid #1b2030;background:linear-gradient(90deg,rgba(121,196,255,.06),rgba(106,226,160,.06))}
+    .strip .row{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+    .badge{display:flex;gap:8px;align-items:center;padding:8px 12px;border:1px dashed #31405b;border-radius:10px;color:#c7d5ea;font-size:13px}
+    /* SECTIONS */
+    .section{padding:64px 0}
+    h2{font-size:34px;line-height:1.15;margin:0 0 10px}
+    .sub{color:var(--muted);margin-bottom:22px}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .feature{background:var(--panel);border:1px solid #23283a;border-radius:14px;padding:18px}
+    .feature .ico{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--brand2),var(--brand));margin-bottom:10px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    /* CARDS */
+    .card{background:var(--panel);border:1px solid #23283a;border-radius:14px;padding:18px;box-shadow:var(--shadow-soft)}
+    /* PRICING */
+    .pricing{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .price{position:relative}
+    .price .tag{position:absolute;top:-10px;right:12px;background:linear-gradient(135deg,#ffd199,#ff9df2);color:#241002;border-radius:12px;padding:6px 10px;font-size:12px;font-weight:800}
+    .price .big{font-size:44px;font-weight:900;margin:8px 0}
+    .price ul{margin:0;padding:0 0 0 20px}
+    /* FAQ */
+    .faq details{background:var(--panel);border:1px solid #23283a;border-radius:12px;padding:14px}
+    .faq details+details{margin-top:12px}
+    .faq summary{cursor:pointer;font-weight:800}
+    /* FOOTER */
+    .footer{padding:38px 0;color:#a4aec2;border-top:1px solid #1b2030}
+    .footgrid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+    /* MOBILE CTA */
+    .mobile-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(10,14,20,.92);backdrop-filter:blur(10px);border-top:1px solid #20263a;padding:10px}
+    .mobile-cta .row{display:flex;gap:10px}
+    /* Responsive */
+    @media (max-width:980px){
+      .hero .grid{grid-template-columns:1fr}
+      .features,.pricing,.grid-3{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      .metrics{grid-template-columns:1fr 1fr}
+      h1{font-size:40px}
+    }
+    @media (max-width:560px){
+      .metrics{grid-template-columns:1fr}
+      .nav .inner{height:66px}
+    }
+  </style>
+
+  <!-- PWA / Icons -->
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#0b0f17">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#6ae2a0">
+  <link rel="icon" type="image/svg+xml" href="men-in-ties-logo.svg">
+
+
+  <!-- Canonical (replace with your real domain) -->
+  <link rel="canonical" href="https://your-domain.com/">
+
+  <!-- Robots -->
+  <meta name="robots" content="index,follow,max-image-preview:large">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Men In Ties — закрытый крипто‑канал">
+  <meta name="twitter:description" content="Точные входы/выходы, дисциплина и прозрачная статистика.">
+  <meta name="twitter:image" content="og-image.png">
+
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="wrap inner">
+      <div class="logo">
+        <picture>
+  <source srcset="men-in-ties-logo.svg" type="image/svg+xml">
+  <img src="men-in-ties-logo.png" alt="Men In Ties" loading="lazy">
+</picture>
+        <span class="brand">Men In Ties</span>
+      </div>
+      <div class="links">
+        <a href="#results" class="pill">Результаты</a>
+        <a href="#inside" class="pill">Что внутри</a>
+        <a href="#pricing" class="pill">Тарифы</a>
+        <a href="https://t.me/meninties_bot" class="btn primary cta-btn">Вступить</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap grid">
+      <div>
+        <div class="kicker"><span class="dot"></span> Закрытый доступ • Крипто‑сигналы</div>
+        <h1>Сигналы, дисциплина, прозрачная статистика</h1>
+        <p class="lead">Никакой угадайки. Даём вход, стоп, цели и логику сделки. Комьюнити помогает держать дисциплину и не сливать депозит.</p>
+        <div class="proofbar">
+          <span class="proof">Точек входа за прошлый месяц: <b>50 сделок</b></span>
+          <span class="proof">Доходность за месяц: <b>27.95%</b></span>
+          <span class="proof">Средний R/R: <b>1:3.2</b></span>
+          <span class="proof">Макс. просадка: <b>0%</b></span>
+        </div>
+        <div class="cta">
+          <a class="btn primary cta-btn" href="https://t.me/meninties_bot">Вступить в канал</a>
+          <a class="btn ghost" href="#results">Смотреть примеры сделок</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="kicker" style="margin-bottom:8px"><span class="dot"></span> Краткая статистика</div>
+        <div class="metrics">
+          <div class="metric"><div class="v">+27.95%</div><div class="muted">Доходность за последний месяц</div></div>
+          <div class="metric"><div class="v">1:3.2</div><div class="muted">Средний риск/прибыль</div></div>
+          <div class="metric"><div class="v">0%</div><div class="muted">Макс. просадка за 60–90д</div></div>
+        </div>
+        <p class="muted" style="margin-top:10px"><small>Показатели информативны и не гарантируют будущие результаты. Крипто — риск.</small></p>
+      </div>
+    </div>
+  </header>
+
+  <!-- TRUST STRIP -->
+  <div class="strip">
+    <div class="wrap row">
+      <div class="badge">💬 Закрытый чат без флуда</div>
+      <div class="badge">📈 Логи сделок и пост‑разборы</div>
+      <div class="badge">🛡️ Риск‑менеджмент и чек‑листы</div>
+      <div class="badge">🕒 Окно набора ограничено по времени</div>
+    </div>
+  </div>
+
+  <!-- PROBLEM / SOLUTION -->
+  <section class="section">
+    <div class="wrap">
+      <h2>Почему большинство сливает депозит</h2>
+      <p class="sub">И как Men In Ties это чинит</p>
+      <div class="features">
+        <div class="feature"><div class="ico"></div><h3>Эмоции вместо правил</h3><p>Покупка на хаях, фиксация на просадке. Мы торгуем по чек‑листу.</p><ul class="list"><li>Готовые сценарии входа</li><li>Стоп и цели заранее</li></ul></div>
+        <div class="feature"><div class="ico"></div><h3>Шум и хайп</h3><p>Никаких слухов. Только сетапы и статистика.</p><ul class="list"><li>Таймфреймы и условия сделки</li><li>План управления позицией</li></ul></div>
+        <div class="feature"><div class="ico"></div><h3>Одиночная игра</h3><p>Окружение помогает не совершать типичных ошибок.</p><ul class="list"><li>Закрытый чат</li><li>Ответы на вопросы</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSIDE -->
+  <section id="inside" class="section">
+    <div class="wrap grid-2">
+      <div class="card">
+        <h2>Что вы получите</h2>
+        <ul class="list">
+          <li><b>Сигналы</b>: вход, стоп, цели, управление позицией</li>
+          <li><b>Ежедневная аналитика</b> ключевых монет/уровней</li>
+          <li><b>Прозрачная статистика</b> всех сделок (лог)</li>
+          <li><b>Чат</b> с адекватными трейдерами</li>
+          <li><b>Поддержка</b>: ответы и разбор ошибок</li>
+          <li><b>База знаний</b>: риск‑менеджмент, чек‑листы</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Почему доступ ограничен</h2>
+        <p>Это ограничение по вниманию и времени: мы держим адекватный размер группы, чтобы сохранять качество обратной связи и успевать разбирать вопросы — без «маркетингового театра».</p>
+        <div class="proofbar"><span class="proof">Персональные ответы</span><span class="proof">Фокус на качестве</span><span class="proof">Без «нуждаемости»</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section id="results" class="section">
+    <div class="wrap">
+      <h2>Результаты и кейсы</h2>
+      <p class="sub">Логи и скрины — внутри. Ниже примеры формата.</p>
+      <div class="grid-3">
+        <div class="card"><span class="pill">Кейс</span><h3>SOL • пробой + ретест</h3><p>+27% за 3 дня. Частичная фиксация, перенос стопа в безубыток.</p></div>
+        <div class="card"><span class="pill">Кейс</span><h3>BTC • среднесрок</h3><p>+$3 500 от входа. План с уровнями и риском.</p></div>
+        <div class="card"><span class="pill">Статистика</span><h3>Выборка 60–90 дней</h3><p>Средний R/R ≈ 1:3.2, макс. просадка ≤ 0%. <small>Не финсовет.</small></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="section">
+    <div class="wrap">
+      <h2>Тарифы</h2>
+      <p class="sub">Без скидок. Ценность — в качестве и поддержке.</p>
+      <div class="pricing">
+        <div class="card price">
+          <div class="tag">Популярный</div>
+          <h3>3 месяца</h3>
+          <div class="big">$590</div>
+          <ul>
+            <li>Сигналы и аналитика</li>
+            <li>Закрытый чат</li>
+            <li>Поддержка</li>
+          </ul>
+          <div class="cta" style="margin-top:14px"><a class="btn primary cta-btn" href="https://t.me/meninties_bot">Войти на 3 месяца</a></div>
+        </div>
+        <div class="card price" style="border-color:#355; box-shadow:0 12px 36px rgba(121,196,255,.18)">
+          <div class="tag">Выгодно</div>
+          <h3>6 месяцев</h3>
+          <div class="big">$990</div>
+          <ul>
+            <li>Всё из тарифа 3 месяца</li>
+            <li>Экономия $190</li>
+            <li>Приоритет на ответы</li>
+          </ul>
+          <div class="cta" style="margin-top:14px"><a class="btn primary cta-btn" href="https://t.me/meninties_bot">Войти на 6 месяцев</a></div>
+        </div>
+      </div>
+      <p class="muted" style="margin-top:10px"><small>Окно набора ограничено по времени — после закрытия доступ будет остановлен до следующего окна.</small></p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section faq">
+    <div class="wrap">
+      <h2>FAQ</h2>
+      <p class="sub">Коротко и по делу</p>
+      <details><summary>Как приходят сигналы?</summary><p>В Telegram‑канал: текст + скриншот сетапа. Указываем <b>вход</b>, <b>стоп</b>, <b>цели</b>, логику и план управления позицией.</p></details>
+      <details><summary>Есть ли статистика?</summary><p>Да. Ведём лог всех сделок с результатами и ссылками на исходные посты. Примерные показатели сейчас: доходность за месяц ≈ 27.95%, средний R/R ≈ 1:3.2.</p></details>
+      <details><summary>Почему нет скидок?</summary><p>Мы не демпингуем. Ценность — в качестве сигналов, разборов и внимания.</p></details>
+      <details><summary>Почему ограничены места?</summary><p>Чтобы сохранять качество обратной связи. Это ограничение по вниманию и времени.</p></details>
+      <details><summary>Это финансовая рекомендация?</summary><p>Нет. Мы делимся аналитикой и своими входами. Решения вы принимаете самостоятельно. Имейте план управления рисками.</p></details>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrap footgrid">
+      <div>
+        <div class="logo" style="margin-bottom:8px">
+          <picture style="width:32px;height:32px;border-radius:9px;box-shadow:0 0 0 1px #1f2536">
+  <source srcset="men-in-ties-logo.svg" type="image/svg+xml">
+  <img src="men-in-ties-logo.png" alt="Men In Ties" loading="lazy">
+</picture>
+          <span class="brand">Men In Ties</span>
+        </div>
+        <p class="muted">Работаем спокойно и системно. Кому подходит — присоединяйтесь, кому нет — наблюдайте за открытой аналитикой.</p>
+        <p class="muted"><small>© 2025. Все права защищены. Не является индивидуальной инвестиционной рекомендацией.</small></p>
+      </div>
+      <div>
+        <div class="links" style="gap:8px">
+          <a class="pill" href="privacy.html">Политика</a>
+          <a class="pill" href="terms.html">Условия</a>
+          <a class="pill" href="https://t.me/rebecourt">@rebecourt</a>
+          <a class="pill" href="https://t.me/may_adm">@may_adm</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE STICKY CTA -->
+  <div class="mobile-cta">
+    <div class="wrap row">
+      <a class="btn ghost" href="#pricing">Тарифы</a>
+      <a class="btn primary cta-btn" href="https://t.me/meninties_bot" style="flex:1;justify-content:center">Вступить</a>
+    </div>
+  </div>
+
+  <!-- Countdown 23:59:59 from page open + CTA disable on finish -->
+  <script>
+    const countdownEnd = new Date(Date.now() + (23*60*60*1000 + 59*60*1000 + 59*1000));
+    const bar = document.createElement('div');
+    bar.style.position='fixed';bar.style.bottom='78px';bar.style.right='18px';
+    bar.style.background='linear-gradient(135deg,#6ae2a0,#79c4ff)';
+    bar.style.color='#06130d';bar.style.padding='10px 14px';bar.style.borderRadius='12px';
+    bar.style.boxShadow='0 12px 28px rgba(0,0,0,.35)';bar.style.fontWeight='800';bar.style.zIndex='40';
+    const span = document.createElement('span'); span.textContent='Набор закрывается через —';
+    const timeEl = document.createElement('b'); timeEl.style.marginLeft='8px';
+    bar.append(span,timeEl); document.body.appendChild(bar);
+
+    const ctas = () => Array.from(document.querySelectorAll('.cta-btn'));
+    function setCtasDisabled(disabled){
+      ctas().forEach(a=>{
+        if(disabled){
+          a.classList.add('disabled');
+          a.setAttribute('aria-disabled','true');
+          a.setAttribute('data-original-href', a.getAttribute('href') || '#');
+          a.setAttribute('href','#');
+          a.textContent = 'Набор закрыт';
+          a.title = 'Окно набора закрыто';
+        }else{
+          if(a.hasAttribute('data-original-href')){
+            a.setAttribute('href', a.getAttribute('data-original-href'));
+          }
+          a.classList.remove('disabled');
+          a.removeAttribute('aria-disabled');
+        }
+      });
+    }
+
+    function tick(){
+      const now = new Date();
+      const ms = countdownEnd - now;
+      if(ms<=0){
+        timeEl.textContent = '0ч 0м 0с';
+        setCtasDisabled(true);
+        if(!document.getElementById('closed-banner')){
+          const b = document.createElement('div');
+          b.id='closed-banner';
+          b.style.position='fixed';b.style.top='0';b.style.left='0';b.style.right='0';
+          b.style.background='rgba(255,107,107,.95)';b.style.color='#1b0b0b';
+          b.style.fontWeight='800';b.style.textAlign='center';b.style.padding='10px 12px';b.style.zIndex='45';
+          b.textContent='Окно набора закрыто. Следующее — скоро.';
+          document.body.appendChild(b);
+        }
+        return;
+      }
+      const h = Math.floor(ms/3600000);
+      const m = Math.floor((ms%3600000)/60000);
+      const s = Math.floor((ms%60000)/1000);
+      timeEl.textContent = `${h}ч ${m}м ${s}с`;
+    }
+
+    setCtasDisabled(false);
+    tick(); setInterval(tick,1000);
+  </script>
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {{
+    "@context":"https://schema.org",
+    "@type":"Product",
+    "name":"Men In Ties",
+    "description":"Закрытый Telegram‑канал с крипто‑сигналами: точки входа/выхода, аналитика, прозрачная статистика, чат трейдеров.",
+    "brand":{{"@type":"Brand","name":"Men In Ties"}},
+    "offers":{{"@type":"AggregateOffer","priceCurrency":"USD","lowPrice":"590","highPrice":"990","availability":"https://schema.org/InStock","url":"https://t.me/meninties_bot"}}
+  }}
+  </script>
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Как приходят сигналы?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "В Telegram‑канал: текст и скриншот сетапа. Указываем вход, стоп, цели, логику и план управления позицией."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Есть ли статистика?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да. Ведём лог всех сделок с результатами и ссылками на исходные посты. Сейчас публикуем агрегированные показатели за месяц и R/R."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Почему нет скидок?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Мы не демпингуем. Ценность — в качестве сигналов, разборов и внимания."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Почему ограничены места?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Чтобы сохранять качество обратной связи. Это ограничение по вниманию и времени."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Это финансовая рекомендация?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Нет. Мы делимся аналитикой и своими входами. Решения вы принимаете самостоятельно. Держите риск‑менеджмент."
+      }
+    }
+  ]
+}
+  </script>
+
+</body>
+</html>
